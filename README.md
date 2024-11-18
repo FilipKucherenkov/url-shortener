@@ -7,6 +7,8 @@
 2. Users should be able to access the original url using the shortened version 
 
 ## Core Entities 
+<img width="681" alt="image" src="https://github.com/user-attachments/assets/cf1a1da2-ffc0-4575-89a3-cf6b7702d6ed">
+
 
 ## Main Endpoints
 
@@ -50,6 +52,8 @@ Content-Type: application/json
 ```
 
 ## HLD
+<img width="478" alt="image" src="https://github.com/user-attachments/assets/2a4383a4-c50a-4de5-8810-a652840868f1">
+
 ### Users should be able to submit a long url and receive a shortened version of it
 1. Client submits a short url by making a `POST` request to `/urls` and optionally providing an alias and expiration_date
 2. Main server receives the request and validates whether the url is a valid url and it does not exist in the db
@@ -70,3 +74,4 @@ Content-Type: application/json
 otherwise -> `HTTP Redirect 302` is returned to client
 
 ### Scaling considerations
+<img width="743" alt="image" src="https://github.com/user-attachments/assets/f2769e0d-69d7-49e6-9536-0cc8c7f1b16d">
