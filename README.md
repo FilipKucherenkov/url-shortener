@@ -88,7 +88,8 @@ otherwise -> `HTTP Redirect 302` is returned to client
 
 ### Scaling considerations
 <img width="743" alt="image" src="https://github.com/user-attachments/assets/f2769e0d-69d7-49e6-9536-0cc8c7f1b16d">
-- `api-gateway` is introduced which will be responcible for request routing, rate limit or any authentication. 
+
+- An `api-gateway` is introduced which will be responcible for request routing, rate limit or any authentication. 
 - To ensure availability and horizontal scaling, multiple replicas of services and the db can be created. The `url-redirection-service` is likely to have more replicas since the system is expected to have a significantly larger number of read compared to write operations. 
 - Redis can be used to store a global counter used when generating the url alias. Lua script can be used for the increment operation to be atomic given the system is distributed.
 - Redis cache is used for caching `alias: original_url` to optimize read operations.
